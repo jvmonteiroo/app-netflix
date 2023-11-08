@@ -13,7 +13,6 @@ export default function Input({placeholder}:InputProps) {
 const styles = StyleSheet.create(
     {
         container: {
-            borderWidth:1,
             borderRadius:8,
             height:52,
             padding:15,
