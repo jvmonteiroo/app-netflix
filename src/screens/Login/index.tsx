@@ -2,8 +2,10 @@ import { Text, View, StyleSheet, Image } from "react-native";
 import Input from "../../components/Input";
 import ButtonPrimary from "../../components/ButtonPrimary";
 import { images } from "../../../images";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Login(){
+    const navigation = useNavigation<any>()
     return(
         <View style={styles.container}>
             <Image source={images.logo} style={styles.logo} resizeMethod="resize" resizeMode="contain"/>
@@ -12,7 +14,7 @@ export default function Login(){
             </Text>
             <Input placeholder="Email ou número de telefone"/>
             <Input placeholder="Senha"/>
-            <ButtonPrimary style={{borderWidth:1}}>
+            <ButtonPrimary style={{borderWidth:1}} onPress={() => navigation.navigate("Account")}>
                 Entrar
             </ButtonPrimary>
         </View>

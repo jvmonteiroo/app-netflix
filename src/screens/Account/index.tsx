@@ -1,27 +1,44 @@
 import { View, StyleSheet } from "react-native";
 import MenuList, { MenuListProps } from "../../components/MenuList";
+import { images } from "../../../images";
 
 export default function Account(){
 
     const menu : MenuListProps[] = [
         {
             title: "Notificações",
+            icone: "bell"
         },
         {
-            title: "Minha lista"
+            title: "Minha lista",
+            icone: "list"
         },
         {
-            title: "Configurações"
+            title: "Configurações",
+            icone: "setting"
         },
         {
-            title: "Conta"
+            title: "Conta",
+            icone: "user"
+        },
+        {
+            title: "Ajuda",
+            icone: "setting"
         }
     ]
     return(
         <View style={styles.container}>
+            <View style={styles.avatarBox}>
+                <View style={[styles.avatar, styles.avatarAccount]}>
+
+                </View>
+                <View style={[styles.avatar, styles.avatarProfilePlus]}>
+
+                </View>
+            </View>
             {
                 menu.map(item => (
-                    <MenuList title={item.title}/>
+                    <MenuList icone={item.icone} title={item.title}/>
                 ))
             }
         </View>
@@ -37,6 +54,22 @@ const styles = StyleSheet.create(
             justifyContent: "center",
             gap:5,
         },
+        avatarBox: {
+            height:125,
+            width:250,
+            flexDirection: "row",
+            marginBottom:70,
+            gap:10,
+        },
+        avatar: {
+            flex:1,
+        },
+        avatarAccount: {
+            backgroundColor:'#e50914',
+        },
+        avatarProfilePlus: {
+            backgroundColor: "#202020",
+        }
 
     }
 )

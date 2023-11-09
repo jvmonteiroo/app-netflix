@@ -4,9 +4,9 @@ import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps } from "react
 type ButtonPrimaryProps = TouchableOpacityProps & {
     children:ReactNode
 }
-export default function ButtonPrimary ({children, style}:ButtonPrimaryProps){
+export default function ButtonPrimary ({children, style, ...rest}:ButtonPrimaryProps){
     return(
-        <TouchableOpacity style={[styles.container, style]}>
+        <TouchableOpacity style={[styles.container, style]} {...rest}>
             <Text style={styles.text}>
                 {children}
             </Text>
