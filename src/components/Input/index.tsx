@@ -1,11 +1,19 @@
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput, StyleSheet, KeyboardTypeOptions, TextInputProps } from "react-native";
 
-type InputProps = {
-    placeholder:string
+type InputProps = TextInputProps & {
+    placeholder:string,
+    keyboardType?:"number-pad"|"email-addres",
+    securityKeyboard?:boolean
 }
-export default function Input({placeholder}:InputProps) {
+export default function Input({placeholder, keyboardType, securityKeyboard}:InputProps) {
     return (
-        <TextInput placeholder={placeholder} placeholderTextColor='#9c9c9c' style={styles.container}/>
+        <TextInput 
+        placeholder={placeholder} 
+        placeholderTextColor='#999' 
+        style={styles.container} 
+        keyboardType={keyboardType || "default"}
+        secureTextEntry={securityKeyboard || false}
+        />
 
     )
 }
@@ -17,6 +25,7 @@ const styles = StyleSheet.create(
             height:52,
             padding:15,
             minWidth:'100%',
+            color: "white",
             backgroundColor:'#333',
         }
     }

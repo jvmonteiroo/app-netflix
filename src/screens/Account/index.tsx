@@ -1,9 +1,11 @@
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, TouchableOpacity, Text } from "react-native";
 import MenuList, { MenuListProps } from "../../components/MenuList";
 import { images } from "../../../images";
+import { useNavigation } from "@react-navigation/native";
+import Login from "../Login";
 
 export default function Account(){
-
+    const navigation = useNavigation<any>() 
     const menu : MenuListProps[] = [
         {
             title: "Notificações",
@@ -30,11 +32,11 @@ export default function Account(){
         <View style={styles.container}>
             <View style={styles.avatarBox}>
                 <View style={[styles.avatar, styles.avatarAccount]} >
-                    <Image source={images.selfie}  resizeMethod='resize' resizeMode='contain'/>
+                    <Image style={styles.selfie} source={images.selfie} resizeMethod='resize' resizeMode='cover'/>
 
                 </View>
                 <View style={[styles.avatar, styles.avatarProfilePlus]} >
-                    <Image source={images.mais}  resizeMethod='resize' resizeMode='contain' />
+                    <Image style={styles.mais} source={images.mais} resizeMethod='resize' resizeMode='cover' />
 
                 </View>
             </View>
@@ -43,6 +45,11 @@ export default function Account(){
                     <MenuList icone={item.icone} title={item.title}/>
                 ))
             }
+            <TouchableOpacity style={styles.buttonSair} onPress={() => navigation.navigate("Login")}>
+                <Text style={styles.text}>
+                    Sair
+                </Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -67,10 +74,33 @@ const styles = StyleSheet.create(
             flex:1,
         },
         avatarAccount: {
-            backgroundColor:'#e50914',
+
         },
         avatarProfilePlus: {
             backgroundColor: "#202020",
+            justifyContent:"center",
+            alignItems:"center",
+        },
+        selfie: {
+            height:125,
+            width:"100%",
+            borderRadius:100,
+        },
+        mais: {
+            height:50,
+            width:50,
+        },
+        buttonSair: {
+            marginTop: 40,
+            width: 100,
+            height: 52,
+            justifyContent: "center",
+            alignItems:"center",
+            borderRadius:12,
+            backgroundColor:"#333"
+        },
+        text: {
+            color:"white"
         }
 
     }

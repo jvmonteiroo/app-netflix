@@ -13,7 +13,7 @@ export default function Login(){
                 Entrar
             </Text>
             <Input placeholder="Email ou número de telefone"/>
-            <Input placeholder="Senha"/>
+            <Input placeholder="Senha" securityKeyboard={true}/>
             <ButtonPrimary style={{borderWidth:1}} onPress={() => navigation.navigate("Account")}>
                 Entrar
             </ButtonPrimary>
