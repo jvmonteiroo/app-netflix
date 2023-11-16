@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import MenuList, { MenuListProps } from "../../components/MenuList";
 import { images } from "../../../images";
 
@@ -29,10 +29,12 @@ export default function Account(){
     return(
         <View style={styles.container}>
             <View style={styles.avatarBox}>
-                <View style={[styles.avatar, styles.avatarAccount]}>
+                <View style={[styles.avatar, styles.avatarAccount]} >
+                    <Image source={images.selfie}  resizeMethod='resize' resizeMode='contain'/>
 
                 </View>
-                <View style={[styles.avatar, styles.avatarProfilePlus]}>
+                <View style={[styles.avatar, styles.avatarProfilePlus]} >
+                    <Image source={images.mais}  resizeMethod='resize' resizeMode='contain' />
 
                 </View>
             </View>

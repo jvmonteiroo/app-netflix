@@ -4,5 +4,7 @@ export const images: any = {
     list:require("./src/images/list.png"),
     setting:require("./src/images/setting.png"),
     user:require("./src/images/user.png"),
-    question:require("./src/images/question.png")
+    question:require("./src/images/question.png"),
+    mais:require("./src/images/mais.png"),
+    selfie:require("./src/images/selfie.jpeg"),
 }
