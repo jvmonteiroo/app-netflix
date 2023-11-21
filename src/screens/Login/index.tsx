@@ -14,7 +14,7 @@ export default function Login(){
             </Text>
             <Input placeholder="Email ou número de telefone"/>
             <Input placeholder="Senha" securityKeyboard={true}/>
-            <ButtonPrimary style={{borderWidth:1}} onPress={() => navigation.navigate("Account")}>
+            <ButtonPrimary style={{borderWidth:1}} onPress={() => navigation.navigate("Home")}>
                 Entrar
             </ButtonPrimary>
         </View>

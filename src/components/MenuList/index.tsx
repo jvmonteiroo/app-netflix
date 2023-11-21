@@ -30,7 +30,7 @@ const styles = StyleSheet.create(
             color:"white",
         },
         icone: {
-            widht:20,
+            width:20,
             height:20,
         }
     }
