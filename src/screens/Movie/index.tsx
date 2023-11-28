@@ -8,7 +8,7 @@ export default function Movie(){
     return(
         <View style={styles.container}>
             <Text>
-                O id do filme é {JSON.stringify(route.params.movie.id)}
+                O id do filme é {JSON.stringify(route.params.id)}
             </Text>
         </View>
     )

@@ -11,13 +11,32 @@ import Movie from './src/screens/Movie';
 const Stack = createNativeStackNavigator()
 
 export default function App() {
+
+  const routes = [
+    {
+      name: 'Login',
+      component: Login
+    },
+    {
+      name: "Home",
+      component: Home
+    },
+    {
+      name: "Movie",
+      component: Movie
+    },
+    {
+      name: "Account",
+      component: Account
+    }
+  ]
+  
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>
-        <Stack.Screen name="Login"component={Login}/>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Account" component={Account}/>
-        <Stack.Screen name="Movie" component={Movie}/>
+        {routes.map( item => (
+          <Stack.Screen name={item.name} component={item.component} />
+        ))}
       </Stack.Navigator>
     </NavigationContainer>
   )
