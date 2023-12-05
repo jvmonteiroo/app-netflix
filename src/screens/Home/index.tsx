@@ -13,23 +13,42 @@ export default function Home(){
         {
             image: images.movie1,
             id:1,
+            title: "Top Gun",
+            gender: "Ação - Comédia - Aventura",
+            sinop: "A escola naval de pilotos é onde o melhor dos melhores treinam para refinar suas habilidades de voo de elite."
         },
         {
             image: images.movie2,
             id:2,
+            title: "Top Gun",
+            gender: "Ação - Comédia - Aventura",
+            sinop: "A escola naval de pilotos é onde o melhor dos melhores treinam para refinar suas habilidades de voo de elite."
         },
+        
         {
             image: images.movie3,
             id:3,
+            title: "Top Gun",
+            gender: "Ação - Comédia - Aventura",
+            sinop: "A escola naval de pilotos é onde o melhor dos melhores treinam para refinar suas habilidades de voo de elite."
         },
+        
         {
             image: images.movie4,
             id:4,
+            title: "Top Gun",
+            gender: "Ação - Comédia - Aventura",
+            sinop: "A escola naval de pilotos é onde o melhor dos melhores treinam para refinar suas habilidades de voo de elite."
         },
+      
         {
             image: images.movie5,
             id:5,
+            title: "Top Gun",
+            gender: "Ação - Comédia - Aventura",
+            sinop: "A escola naval de pilotos é onde o melhor dos melhores treinam para refinar suas habilidades de voo de elite."
         },
+        
     ]
 
     return(

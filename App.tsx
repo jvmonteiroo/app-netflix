@@ -15,27 +15,45 @@ export default function App() {
   const routes = [
     {
       name: 'Login',
-      component: Login
+      component: Login,
+      headerShown: false,
+      title: "",
     },
     {
       name: "Home",
-      component: Home
+      component: Home,
+      headerShown: true,
+      title: "Tela incial",
     },
     {
       name: "Movie",
-      component: Movie
+      component: Movie,
+      headerShown: true,
+      title: "Filmes",
     },
     {
       name: "Account",
-      component: Account
+      component: Account,
+      headerShown: true,
+      title: "Conta"
     }
   ]
   
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown:false}}>
+      <Stack.Navigator >
         {routes.map( item => (
-          <Stack.Screen name={item.name} component={item.component} />
+          <Stack.Screen name={item.name} options={{
+            headerShown: item.headerShown,
+            headerStyle: {
+              backgroundColor: "#000"
+            },
+            title: item.title,
+            headerTitleStyle: {
+              color:"white",
+            },
+            headerTintColor: 'white',
+          }} component={item.component} />
         ))}
       </Stack.Navigator>
     </NavigationContainer>
